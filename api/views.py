@@ -253,6 +253,8 @@ class PaypalPaymentSucceededView(APIView):
             return JsonResponse({'response': "no"})
 
 
+# doc: https://gist.github.com/tichif/2a045112f863e19c05f526b022dfad9a
+
 # get mon cash auth token
 @api_view(['GET'])
 def GetMonCashAuthToken(request):
