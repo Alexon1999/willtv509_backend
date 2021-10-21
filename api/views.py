@@ -47,6 +47,11 @@ class CheckoutSubscriptionSessionView(APIView):
                 # For metered billing, do not pass quantity
                 'quantity': 1
             }],
+            # https://stripe.com/docs/api/checkout/sessions/create
+            # create new subscription, with trial period days
+            subscription_data={
+                'trial_period_days': 15
+            },
             customer=customer.get("monAbonnement").get("stripeCustomerID"),
             customer_update={"name": "auto"},
         )

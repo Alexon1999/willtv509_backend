@@ -4,9 +4,10 @@ from rest_framework_simplejwt import views as jwt_views
 # import views  # ModuleNotFoundError: No module named 'views'
 # from api import views  # absolute imports
 # import api.views as views # absolute imports
+# from api.views import CategorieListView  # absolute imports
 from . import views  # relative imports
 # from .views import CategorieListView  # relative imports
-
+# import .views  # err: Relative imports cannot be used with "import .a" form; use "from . import a" instead
 
 app_name = 'Api'
 
