@@ -11,3 +11,5 @@
 - Subscription (Stripe)
 - Pay video with Paypal, Stripe and MonCash
 - We use Vimeo for stock videos, and use the url and put in our database
+
+## Deployed on Heroku
