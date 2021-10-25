@@ -20,6 +20,7 @@ from .models import *
 
 # permissions.IsAuthenticated: we should pass an Autorization header, the type is Bearer token
 
+# stripe test secret api key
 stripe.api_key = "sk_test_51J8GK0C1J1Je91FHFE4X3KOaCxzW3rO7BbYeftt7ovj0Zm5o6BMxAiKdbtRedi2gEYDCqTVmW33um8IH7LoAKZAD00WHkMF9XF"
 
 
