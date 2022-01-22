@@ -409,5 +409,5 @@ class VideosBySearchQueryView(APIView):
 
     def get(self, request, *args, **kwargs):
         query = kwargs["query"].lower()
-        videos = Video.objects.filter(title__contains=query)
+        videos = Video.objects.filter(title__icontains=query)
         return Response(VideoSerializer(videos, many=True).data)
