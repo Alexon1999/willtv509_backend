@@ -1,3 +1,4 @@
+from turtle import title
 import requests
 import stripe
 import json
@@ -400,3 +401,13 @@ def CategoriesAndVideosView(request):
 class VideoDetailsView(generics.RetrieveAPIView):
     serializer_class = VideoSerializer
     queryset = Video.objects.all()
+
+
+class VideosBySearchQueryView(APIView):
+    serializer_class = VideoSerializer
+    queryset = Video.objects.all()
+
+    def get(self, request, *args, **kwargs):
+        query = kwargs["query"].lower()
+        videos = Video.objects.filter(title__contains=query)
+        return Response(VideoSerializer(videos, many=True).data)

@@ -20,6 +20,7 @@ urlpatterns = [
     path('categories/<int:pk>/', views.CategoriesVideosView.as_view()),
     path('categories-videos/', views.CategoriesAndVideosView),
     path('videos/<int:pk>/', views.VideoDetailsView.as_view()),
+    path('videos/query/<str:query>/', views.VideosBySearchQueryView.as_view()),
     path('create-client/', views.ClientCreateView.as_view()),
     path('get-client/', views.ClientView.as_view()),
     path('get-plans/', views.get_plans),  # subscription plans
